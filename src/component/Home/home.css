@@ -16,7 +16,7 @@
 
 .home__container .home__background {
   width: 100%;
-  margin-bottom: -60vh;
+  margin-bottom: -40vh;
   height: 90vh;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
