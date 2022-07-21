@@ -1,0 +1,38 @@
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 3px;
+    border: 1px solid #dddddd;
+    row-gap: 25px;
+    p{ font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: capitalize;
+    }  
+    small{
+        font-weight: 800;
+        font-size: 1rem;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        span{
+            margin-left: 10px;
+
+        }
+       
+    }
+    button{
+        background:var(--button-color);
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        border-color:#a88734 #9c7e31 #846a29 ;
+        color: #111;
+        text-transform: capitalize;
+        height: 30px;
+
+    }
+}

@@ -36,9 +36,9 @@ function Home() {
                   rating={5}
                   img={ schoolBag }
               />
-                <Product title="SHARE THIS PRODUCT Backpack Waterproof Shoulder Bag For Men, Multifunctional Short Travel Accessory Bag With Lock"
-                  price="15000"
-                  rating={5}
+                <Product title="RCA RFR741-BLACK Apartment Size-Top Freezer-2 Door Fridge-Adjustable Thermostat Control-Black-7.5 Cubic Feet"
+                  price="69,990"
+                  rating={4}
                   img={ fridge }
               />
                <Product title="Chrysolite Designs Super Numbers Casual Polo Bundle - Wine, Grey, Navyblue, Red."
