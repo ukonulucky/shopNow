@@ -1,7 +1,19 @@
 import React from 'react'
 import "./subtotal.css"
 import CurrencyFormat from 'react-currency-format';
+import { useSelector } from 'react-redux';
+
 function Subtotal() {
+
+
+    const data = useSelector(state => state.itemAdded?.map((i,j) => {
+       return  parseFloat(i.price)
+    }))
+    const total = data.reduce((prev,iniTial) => {
+        return prev + iniTial
+          }, 0)
+    console.log("form subtotla", data)
+console.log(total)
   return (
       <div className="subtotal">
           <CurrencyFormat
@@ -9,8 +21,10 @@ function Subtotal() {
                   return (
                       <>
                           <p>
-                              Subtotal (0 items):
-                              <strong>0</strong>
+                              Subtotal ({data.length} {
+                                  data.length > 1 ? "items" :"item"
+                              }):
+                              <strong>{ total }</strong>
                           </p>
                           <small className="subtotal__gift">
                               <input type="checkbox" />
@@ -26,7 +40,7 @@ function Subtotal() {
               thousandSeparator={true}
               prefix={"#"}
               displayType={"text"}
-              value={0}
+              value={total}
               decimalScale={ 2}
           />
           <button>

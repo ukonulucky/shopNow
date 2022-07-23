@@ -1,5 +1,8 @@
 import React from 'react'
 import "./home.css"
+import {useSelector} from "react-redux"
+
+// images imported
 import backgroundPic from "../../utils/images/large-1.jpg"
 import watch from "../../utils/images/watch.png"
 import shoe from "../../utils/images/shoe.png"
@@ -8,8 +11,21 @@ import cloth from "../../utils/images/cloth.jpg"
 import fridge from "../../utils/images/fridge.png"
 import schoolBag from "../../utils/images/schoolbag.jpg"
 import television from "../../utils/images/tele2.jpeg"
+// components
 import Product from '../product/Product'
+
 function Home() {
+    const state = useSelector(state => state)
+   
+    const cart = state.users?.map((i,j) => {
+        return <div key={i.id}>
+            <Product title={i.title}
+            price={i.price}
+            rating={i.rating}
+            img={i.img} />
+            </div>
+    })
+    console.log(cart)
   return (
       <div className="home__container">
         
@@ -27,6 +43,7 @@ function Home() {
                   rating={5}
                   img={ shoe }
               />
+              {/* {cart.splice(0,2)} */}
             
             
           </div>
@@ -47,6 +64,7 @@ function Home() {
                   img={ cloth }
               />
               
+              {/* { cart.slice(2,5)} */}
           </div>
           <div className="home__row">
           <Product title="SHARE THIS PRODUCT Polystar 40 INCH SMART CURVED LED TV + Free Wall Bracket 2021 MODEL"
@@ -54,6 +72,7 @@ function Home() {
                   rating={5}
                   img={ television}
               />
+              {/* {cart.slice(5,6)} */}
           </div>
     </div>
   )

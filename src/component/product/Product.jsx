@@ -1,9 +1,13 @@
 import React from 'react'
 import Star from '@mui/icons-material/Star';
 import "./product.css"
+import { addToBasket }  from "../../redux/action"
+import { useDispatch, useSelector } from "react-redux"
 
 
-function Product({ title, price, rating, img}) {
+function Product({ title, price, rating, img }) {
+  const dispatch = useDispatch()
+  const cart = useDispatch(state => state.cart)
   return (
       <div className="product">
           <div className="product__info">
@@ -21,7 +25,12 @@ function Product({ title, price, rating, img}) {
             
           </div>
           <img src={img} alt="watch" />
-          <button>
+      <button onClick={() => {
+        dispatch(addToBasket({
+          title, price, rating, img 
+        }))
+        
+          }}>
              add to basket
           </button>
     </div>

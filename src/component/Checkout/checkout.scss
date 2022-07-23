@@ -1,7 +1,7 @@
 .checkout{
     width: 100%;
     height: max-content;
-    .checkout__right{
+    .checkout__left{
         margin-right: 25vw;
         img{
             width: 100%;
@@ -10,12 +10,17 @@
          
         }
     }
-    .checkout__left{
+    .checkout__right{
         position: fixed;
         top: 60px;
         right: 0;
         width: 25vw;
-        border: 5px solid red;
         z-index: 2;
+        .checkout__list{
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          width: 40vw;
+        }
     }
 }
