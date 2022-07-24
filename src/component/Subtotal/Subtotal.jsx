@@ -17,14 +17,14 @@ console.log(total)
   return (
       <div className="subtotal">
           <CurrencyFormat
-              renderText={() => {
+              renderText={(value) => {
                   return (
                       <>
                           <p>
                               Subtotal ({data.length} {
                                   data.length > 1 ? "items" :"item"
                               }):
-                              <strong>{ total }</strong>
+                              <strong>{ value }</strong>
                           </p>
                           <small className="subtotal__gift">
                               <input type="checkbox" />

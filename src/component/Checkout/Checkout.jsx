@@ -2,18 +2,21 @@ import React from 'react'
 import "./checkout.css"
 import Subtotal from '../Subtotal/Subtotal'
 import { useSelector } from 'react-redux';
-import Product from '../product/Product.jsx';
+import BasketItem from '../basketItems/BasketItem';
+
 
 function Checkout() {
   const addedItem = useSelector(state => state.itemAdded)
-  console.log(addedItem)
+  console.log("this is the added item", addedItem)
   const checkoutProduct = addedItem.map((i, j) => {
     return (
-      <div key={i.id}>
-      <Product price={i.price} title={i.title} img={i.img} rating={i.rating}  />
-    </div>
+      <div key={j}>
+       
+        <BasketItem img={i.img} title={i.title} rating={i.rating} price={i.price} id={ i.id }  />
+    </div> 
     )
   })
+
 
   return(
       <div className="checkout">
@@ -23,7 +26,7 @@ function Checkout() {
                Your Purchase   
               </h2>
         <div className="checkout__list">
-          {addedItem.length > 0 ? (
+        {addedItem.length > 0 ? (
              checkoutProduct
           ) : <h2>
           No item added

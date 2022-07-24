@@ -5,7 +5,7 @@ import { addToBasket }  from "../../redux/action"
 import { useDispatch, useSelector } from "react-redux"
 
 
-function Product({ title, price, rating, img }) {
+function Product({ title, price, rating, img, id }) {
   const dispatch = useDispatch()
   const cart = useDispatch(state => state.cart)
   return (
@@ -27,7 +27,7 @@ function Product({ title, price, rating, img }) {
           <img src={img} alt="watch" />
       <button onClick={() => {
         dispatch(addToBasket({
-          title, price, rating, img 
+          title, price, rating, img , id
         }))
         
           }}>

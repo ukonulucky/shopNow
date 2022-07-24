@@ -22,10 +22,12 @@ function Home() {
             <Product title={i.title}
             price={i.price}
             rating={i.rating}
+            id= { i.id }
             img={i.img} />
+            
             </div>
     })
-    console.log(cart)
+
   return (
       <div className="home__container">
         
@@ -33,46 +35,52 @@ function Home() {
               className="home__background"
               src={backgroundPic} alt="background" />
           <div className="home__row">
-              <Product title="SUPCASE [Unicorn Beetle Pro] Series Case for Galaxy Watch 4 Classic [46mm] 2021 Release, Rugged Protective Case with Strap Bands"
+              {/* <Product title="SUPCASE [Unicorn Beetle Pro] Series Case for Galaxy Watch 4 Classic [46mm] 2021 Release, Rugged Protective Case with Strap Bands"
                   price="15000"
                   rating={5}
-                  img={ watch }
+                  img={watch}
+                  id= { i.id }
               />
               <Product title="A4 Fashion Hollow Breathable Business Leather Shoes-866 Black Hollow"
                   price="15000"
                   rating={5}
-                  img={ shoe }
-              />
-              {/* {cart.splice(0,2)} */}
+                  img={shoe}
+                  id= { i.id }
+              /> */}
+              {cart.splice(0,2)}
             
             
           </div>
           <div className="home__row">
-          <Product title="SHARE THIS PRODUCT Backpack Waterproof Shoulder Bag For Men, Multifunctional Short Travel Accessory Bag With Lock"
+          {/* <Product title="SHARE THIS PRODUCT Backpack Waterproof Shoulder Bag For Men, Multifunctional Short Travel Accessory Bag With Lock"
                   price="15000"
                   rating={5}
-                  img={ schoolBag }
+                  img={schoolBag}
+                  id= { i.id }
               />
                 <Product title="RCA RFR741-BLACK Apartment Size-Top Freezer-2 Door Fridge-Adjustable Thermostat Control-Black-7.5 Cubic Feet"
                   price="69,990"
                   rating={4}
-                  img={ fridge }
+                  img={fridge}
+                  id= { i.id }
               />
                <Product title="Chrysolite Designs Super Numbers Casual Polo Bundle - Wine, Grey, Navyblue, Red."
                   price="11,095"
                   rating={5}
-                  img={ cloth }
-              />
+                  img={cloth}
+                  id= { i.id }
+              /> */}
               
-              {/* { cart.slice(2,5)} */}
+              { cart.slice(2,5)}
           </div>
           <div className="home__row">
-          <Product title="SHARE THIS PRODUCT Polystar 40 INCH SMART CURVED LED TV + Free Wall Bracket 2021 MODEL"
+          {/* <Product title="SHARE THIS PRODUCT Polystar 40 INCH SMART CURVED LED TV + Free Wall Bracket 2021 MODEL"
                   price="133,000"
                   rating={5}
-                  img={ television}
-              />
-              {/* {cart.slice(5,6)} */}
+                  img={television}
+                  id= { i.id }
+              /> */}
+              {cart.slice(5,6)}
           </div>
     </div>
   )
