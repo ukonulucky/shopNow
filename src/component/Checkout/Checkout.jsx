@@ -23,7 +23,7 @@ function Checkout() {
           <div className="checkout__left">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkwfzJLPrIsEAvcjKkvmSyUT_03D_ISvFENQ&usqp=CAU" alt="advert" />
               <h2 className="checkout__title">
-               Your Purchase   
+               Your Shopping Basket 
               </h2>
         <div className="checkout__list">
         {addedItem.length > 0 ? (
