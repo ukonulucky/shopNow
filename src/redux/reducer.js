@@ -34,23 +34,22 @@ const initialState = {
         {
             title: "RCA RFR741-BLACK Apartment Size-Top Freezer-2 Door Fridge-Adjustable Thermostat Control-Black-7.5 Cubic Feet",
             price:"66900",
-            rating:4 ,
+            rating:4,
             img: "fridge",
             id:Math.random()
-            
             
         },
         {
             title: "Chrysolite Designs Super Numbers Casual Polo Bundle - Wine, Grey, Navyblue, Red.",
-            price:"11,095",
-            rating:5 ,
+            price:"11095",
+            rating:5,
             img:"cloth"
             
             
         },
         {
         title:"SHARE THIS PRODUCT Polystar 40 INCH SMART CURVED LED TV + Free Wall Bracket 2021 MODEL",
-        price:"133,000",
+        price:"133000",
         rating:5,
         img: "television",
         id:Math.random()
