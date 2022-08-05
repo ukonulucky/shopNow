@@ -1,0 +1,81 @@
+.login{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   .login__logo{
+    img{
+        width: 200px;
+        object-fit: cover;
+        display: flex;
+        margin-bottom: 1.5rem;
+        margin-top: 5rem;
+    }
+   }
+   .login__container{
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      border: 1px solid grey;
+      padding: 20px;
+      width: 60vh;
+   }
+   h1{
+    margin-bottom: 1rem;
+    color: black;
+   }
+   form > h5{
+    margin-bottom:1rem;
+    font-size: 1rem;
+   }
+   form{
+  
+    input{
+        width: 98%;
+        height:40px;
+        padding: 5px;
+        margin-bottom: 1.2rem;
+    }
+    .login__signIn{
+        background: var(--button-color);
+        margin-top: 15px;
+        border: 1px solid;
+        color: #111;
+        margin: 0 auto;
+        padding: 10px 20px;
+        border-color: #a88734 #9c7e31 #846a29;
+        text-transform: capitalize;
+        cursor: pointer;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        font-size: 1rem;
+
+    }
+   }
+   p{
+    margin-top: 15px;
+    font-size: 12px;
+  text-transform: capitalize;
+   }
+
+   .login__register{
+    margin-top: 15px;
+    border: 1px solid darkgray;
+    color: #111;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+}

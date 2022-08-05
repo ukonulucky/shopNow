@@ -7,11 +7,9 @@ import BasketItem from '../basketItems/BasketItem';
 
 function Checkout() {
   const addedItem = useSelector(state => state.itemAdded)
-  console.log("this is the added item", addedItem)
   const checkoutProduct = addedItem.map((i, j) => {
     return (
       <div key={j}>
-       
         <BasketItem img={i.img} title={i.title} rating={i.rating} price={i.price} id={ i.id }  />
     </div> 
     )

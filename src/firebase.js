@@ -1,3 +1,6 @@
+import { initializeApp } from "firebase/app"
+
+import {} from "firebase/firestore"
 const firebaseConfig = {
     apiKey: "AIzaSyAOZlr1N26OD7udVvALFa6HVpBmXmrCVQU",
     authDomain: "shopnow-1a93e.firebaseapp.com",
@@ -6,4 +9,7 @@ const firebaseConfig = {
     messagingSenderId: "407064121492",
     appId: "1:407064121492:web:3140eefe1524a8d1462481",
     measurementId: "G-GE1ZK2XJ50"
-  };
+};
+  
+ export const firebaseApp =initializeApp(firebaseConfig)
+
