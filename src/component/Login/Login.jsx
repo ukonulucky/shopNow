@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
-
+import { useDispatch } from 'react-redux'
+import {userLogin} from "../../redux/action"
 import "./Login.css"
 import { Link , useNavigate } from "react-router-dom"
 import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth"
@@ -7,6 +8,7 @@ import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } fr
 function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const dispatch = useDispatch()
     const registerRef = useRef()
     const navigate = useNavigate()
     const registerUser = (e) => {
@@ -25,10 +27,11 @@ function Login() {
     const loginUser = (e) =>  {
         e.preventDefault()
         if (email && password) {
-            console.log("for login", email, password)
             const auth = getAuth()
             signInWithEmailAndPassword(auth, email, password).then(() => {
                 console.log("user signed in")
+                dispatch(userLogin( email ))
+                console.log("dispatch just ran")
                 navigate("/")
             }).catch(err => alert(err.message))
             
@@ -43,7 +46,7 @@ function Login() {
           </div>
           <div className="login__container">
               <h1>Sign In</h1>
-              <form onSubmit={loginUser} ref={
+              <form onSubmit={(e) => loginUser(e)} ref={
                   registerRef
               }>
                   <h5>E-Mail</h5>

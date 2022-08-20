@@ -1,0 +1,39 @@
+[debug] [2022-08-20T22:54:52.536Z] ----------------------------------------------------------------------
+[debug] [2022-08-20T22:54:52.539Z] Command:       /home/ukonu-lucky/.nvm/versions/node/v16.13.2/bin/node /home/ukonu-lucky/.nvm/versions/node/v16.13.2/bin/firebase init
+[debug] [2022-08-20T22:54:52.540Z] CLI Version:   11.7.0
+[debug] [2022-08-20T22:54:52.540Z] Platform:      linux
+[debug] [2022-08-20T22:54:52.540Z] Node Version:  v16.13.2
+[debug] [2022-08-20T22:54:52.540Z] Time:          Sat Aug 20 2022 22:54:52 GMT+0000 (Greenwich Mean Time)
+[debug] [2022-08-20T22:54:52.541Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-20T22:54:52.551Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-20T22:54:52.552Z] > authorizing via signed-in user (ukonulucky@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/ukonu-lucky/Desktop/code-arena/Projects/shopnow
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-08-20T22:55:23.636Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-08-20T22:55:30.545Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-08-20T22:55:30.545Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project shopnow-1a93e (shopnow) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

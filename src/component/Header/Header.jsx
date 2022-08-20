@@ -7,6 +7,7 @@ import { useSelector } from "react-redux"
 import {Link} from "react-router-dom"
 function Header() {
     const addedItem = useSelector(state => state.itemAdded)
+    const userLogin = useSelector(state => state.userLogin)
   return (
       <div className="header">
           <Link to="/">
@@ -20,7 +21,7 @@ function Header() {
           </div>
           <div className="header__nav">
               <div className="header__option">
-                  <span className="header__lineOne">hello</span>
+                  <span className="header__lineOne">hello {userLogin}</span>
                   <span className="header__lineTwo">
                       sign in
                   </span>
