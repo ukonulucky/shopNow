@@ -6,6 +6,7 @@ import Checkout from "./component/Checkout/Checkout";
 import { store } from "./redux/state"
 import {Provider } from "react-redux"
 import Login from "./component/Login/Login";
+import Payment from "./component/Payment/Payment";
 
 function App() {
   return (
@@ -25,16 +26,17 @@ function App() {
                <Checkout />
             </>
           } />
+            <Route exact path="/payment" element={
+              <>
+               <Header />
+              <Payment />
+              </>
+          } />
              <Route exact path="/" element={
               <>
                    <Header />
                <Home />
             </>
-          } />
-          <Route component={
-            
-               <h2>No route found</h2>
-  
           } />
         </Routes>
       </div>

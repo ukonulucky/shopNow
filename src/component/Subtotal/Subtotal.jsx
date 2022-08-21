@@ -2,18 +2,18 @@ import React from 'react'
 import "./subtotal.css"
 import CurrencyFormat from 'react-currency-format';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Subtotal() {
 
-
+ const navigate = useNavigate()
     const data = useSelector(state => state.itemAdded?.map((i,j) => {
        return  parseFloat(i.price)
     }))
     const total = data.reduce((prev,iniTial) => {
         return prev + iniTial
-          }, 0)
-    console.log("form subtotla", data)
-console.log(total)
+    }, 0)
+    
   return (
       <div className="subtotal">
           <CurrencyFormat
@@ -43,7 +43,9 @@ console.log(total)
               value={total}
               decimalScale={ 2}
           />
-          <button>
+          <button onClick={() => {
+            navigate("/payment")
+          }} >
               proceed to checkout
           </button>
 

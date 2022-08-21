@@ -20,12 +20,14 @@ function Header() {
              </div>
           </div>
           <div className="header__nav">
+              <Link to={ userLogin ? "/": "/login"}>
               <div className="header__option">
-                  <span className="header__lineOne">hello {userLogin}</span>
+                  <span className="header__lineOne">hello {userLogin? userLogin : "Guest"}</span>
                   <span className="header__lineTwo">
-                      sign in
-                  </span>
-              </div>
+                          { userLogin ? <span> Sign Out</span> :  <span>Sign In</span>  }
+                   </span>
+                  </div>
+            </Link>
               <div className="header__option">
                   <span className="header__lineOne">return</span>
                   <span className="header__lineTwo">
