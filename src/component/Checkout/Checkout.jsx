@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import "./checkout.css"
+
 import Subtotal from '../Subtotal/Subtotal'
 import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom"

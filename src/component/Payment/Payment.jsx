@@ -1,11 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+
 import { Link, useNavigate } from 'react-router-dom'
 import BasketItem from '../basketItems/BasketItem'
+import Paystack from '../Paystack/Paystack'
 import "./Payment.css"
+
+import CurrencyFormat from 'react-currency-format';
+
 
 
 export default function Payment() {
+  const data = useSelector(state => state.itemAdded?.map((i,j) => {
+    return  parseFloat(i.price)
+  }))
+  const total = data.reduce((prev,iniTial) => {
+    return prev + iniTial
+}, 0)
+const [amount, setAmount] = useState(total)
+
+  
+const changeState = (value) => {
+setAmount(value)
+}
+
+
+// useEffect(() => {
+    
+//     const total = data.reduce((prev,iniTial) => {
+//         return prev + iniTial
+//     }, 0)
+// changeState(total)
+// }, [total])
+
   const navigate = useNavigate()
     const addedItem = useSelector(state => state.itemAdded)
     useEffect(() => {
@@ -58,7 +85,38 @@ export default function Payment() {
                       {checkoutProduct}
                   </div>
               </div>
-              <div className="payment__section"></div>
+        <div className="payment__section">
+        <div className="payment__title">
+                  <h3>Payment Method</h3>
+                  </div>
+          <div className="payment__item">
+            <div className="paystack">
+             
+             
+<CurrencyFormat
+              renderText={(amount) => {
+                  return (
+                      <>
+                      <h3> Order Total:
+                     <strong>
+                        {amount}
+                        </strong>
+                        </h3> 
+                      </>
+
+                  )
+                  
+              }}
+              thousandSeparator={true}
+              prefix={"#"}
+              displayType={"text"}
+              value={amount}
+              decimalScale={2}
+/>
+              <Paystack />
+          </div>
+                  </div>
+              </div>
           </div>
     </div>
   )

@@ -1,8 +1,10 @@
 import React from 'react'
 import "./subtotal.css"
+
 import CurrencyFormat from 'react-currency-format';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Paystack from '../Paystack/Paystack';
 
 function Subtotal() {
 
@@ -46,7 +48,7 @@ function Subtotal() {
           <button onClick={() => {
             navigate("/payment")
           }} >
-              proceed to checkout
+             Proceed To Checkout
           </button>
 
          
